@@ -10,7 +10,7 @@ public class StudentManager {
         return Student.getValueOf(studentID);
       }
     }
-    throw new CustomException(studentID);
+    throw new CustomException (studentID);
   }
 
   public static void main(String[] args) {
@@ -22,3 +22,4 @@ public class StudentManager {
 
   }
 }
+
