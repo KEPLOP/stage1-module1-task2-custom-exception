@@ -15,7 +15,6 @@ public class StudentManager {
 
   public static void main(String[] args) {
     StudentManager manager = new StudentManager();
-    Student studentNotFound = manager.find(13);
 
     for (long id : IDs) {
       try {
