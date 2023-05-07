@@ -2,7 +2,7 @@ package com.epam.mjc;
 
 
 public class StudentManager {
-  private static final long[] IDs = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+  private static final long[] IDs = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
   public Student find(long studentID) {
     for (long id : IDs) {
@@ -16,13 +16,9 @@ public class StudentManager {
   public static void main(String[] args) {
     StudentManager manager = new StudentManager();
 
-    for (long id : IDs) {
-      try {
-        Student student = manager.find(id);
-        System.out.println("Student name " + student.getName());
-      } catch (CustomException e) {
-        System.out.println(e.getMessage());
-      }
-    }
+    Student student = manager.find(3);
+    System.out.println("Student name " + student.getName());
+    Student studentNotFound = manager.find(13);
+
   }
 }
